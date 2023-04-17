@@ -1,0 +1,22 @@
+#数据库
+msyql:
+  host: 127.0.0.1
+  port: 3306
+  db: mySelfDB
+  user: root
+  password: chenyijun
+  log_level: dev
+
+#日志
+logger:
+  level: info
+  prefix: '[ginBlog]'
+  director: log
+  show-line: true
+  log-in-console: true
+
+#系统信息
+system:
+  host: "192.168.0.0"
+  port: 80
+  env: dev
