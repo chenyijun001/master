@@ -10,3 +10,7 @@ type Mysql struct {
 	Password string `yaml:"password"`
 	LogLevel string `yaml:"log_level"`
 }
+
+func (m *Mysql) Dsn() string {
+	return m.User + ":" + m.Password + "@tcp(" + m.Host + ":" + m.Port + ")/" + m.Db
+}

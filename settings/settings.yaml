@@ -1,11 +1,11 @@
 #数据库
-msyql:
+mysql:
   host: 127.0.0.1
   port: 3306
-  db: mySelfDB
+  db: test
   user: root
   password: chenyijun
-  log_level: dev
+  log_level: env
 
 #日志
 logger:
@@ -17,6 +17,6 @@ logger:
 
 #系统信息
 system:
-  host: "192.168.0.0"
-  port: 80
-  env: dev
+  host: 127.0.0.1
+  port: 8090
+  env: release

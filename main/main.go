@@ -1,13 +1,13 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"GinBlog/core"
+	"GinBlog/global"
+	"GinBlog/routers"
+)
 
 func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run() // listen and serve on localhost:80801111
+	core.InitCore()
+	r := routers.InitRouter()
+	r.Run(global.Config.System.Addr())
 }
