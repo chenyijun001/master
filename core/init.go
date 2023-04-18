@@ -8,4 +8,5 @@ func InitCore() {
 	InitConf()
 	global.Logs = InitLogger()
 	global.DB = InitMysql()
+	global.ErrMsg = InitError()
 }

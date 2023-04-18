@@ -1,14 +1,19 @@
 package routers
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+)
 
 //初始化路由
+type RouterGroup struct {
+	*gin.RouterGroup
+}
 
 func InitRouter() *gin.Engine {
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, "demo")
-	})
+	apiGroup := r.Group("api/")
+	routerGroupApp := RouterGroup{apiGroup}
+	routerGroupApp.SettingRouter()
 	return r
 }

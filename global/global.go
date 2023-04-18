@@ -2,6 +2,7 @@ package global
 
 import (
 	"GinBlog/config"
+	"GinBlog/core"
 	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
 )
@@ -13,4 +14,5 @@ var (
 	Config *config.Config
 	DB     *gorm.DB
 	Logs   *logrus.Logger
+	ErrMsg *core.ErrMap
 )
