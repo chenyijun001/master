@@ -1,6 +1,8 @@
 package res
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+)
 
 type Response struct {
 	Code int    `json:"code"`
@@ -46,7 +48,8 @@ func FailWithMessage(msg string, c *gin.Context) {
 }
 
 func FailWithCode(code ErrorCode, c *gin.Context) {
-	msg, ok := ErrMap[code]
+	errMap := InitError()
+	msg, ok := errMap[code]
 	if ok {
 		Result(int(code), map[string]any{}, msg, c)
 		return

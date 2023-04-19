@@ -1,5 +1,11 @@
 package res
 
+import (
+	"GinBlog/global"
+	"encoding/json"
+	"os"
+)
+
 /*
 	所有的错误码，都会放在这
 */
@@ -7,11 +13,22 @@ package res
 type ErrorCode int
 
 const (
-	SettingError ErrorCode = -1000 //系统错误
+	SettingError ErrorCode = 1001 //系统错误
 )
 
-var (
-	ErrMap = map[ErrorCode]string{
-		SettingError: "系统出现问题",
+const file = "models/res/code.json"
+
+type ErrMap map[ErrorCode]string
+
+func InitError() ErrMap {
+	file, err := os.ReadFile(file)
+	if err != nil {
+		global.Logs.Fatalf("open code.json file error:%s", err)
 	}
-)
+	ErrMsg := &ErrMap{}
+	err = json.Unmarshal(file, ErrMsg)
+	if err != nil {
+		global.Logs.Fatalf("json resolve failed error:%s", err)
+	}
+	return *ErrMsg
+}
