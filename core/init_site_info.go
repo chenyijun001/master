@@ -16,6 +16,6 @@ func SetYaml() error {
 	if err != nil {
 		return err
 	}
-	global.Logs.Info("success update yaml--siteInfo")
+	global.Logs.Info("success update yaml")
 	return nil
 }

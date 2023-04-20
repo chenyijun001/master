@@ -7,6 +7,6 @@ import (
 var setting = api.App.SettingApi
 
 func (r RouterGroup) SettingRouter() {
-	r.GET("/settings", setting.SettingInfoView)
-	r.POST("/settingsInfo", setting.SettingUpdateInfoView)
+	r.GET("settingsInfo/:name", setting.SettingInfoView)
+	r.POST("settingsUpdate/:name", setting.SettingUpdateInfoView)
 }

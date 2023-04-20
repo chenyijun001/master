@@ -17,3 +17,26 @@ system:
     env: release
 site_info:
     create_at: "11111"
+email:
+    level: ""
+    port: 56782222
+    user: ""
+    password: ""
+    default_from_email: ""
+    use_ssl: false
+    user_tls: false
+qq:
+    app_id: xxx
+    key: xx
+    redirect: http://xx.xx.com/login?flag=qq
+jwt:
+    secret: xxx
+    expires: 48
+    issuer: xx
+qiniu:
+    access_key: UMM-xx-FdRif-xx
+    secret_key: xx
+    bucket: xiugo
+    cdn: xx://xx.xx.com/
+    zone: xx
+    size: 5
