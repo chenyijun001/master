@@ -7,4 +7,5 @@ type ApiGroup struct {
 }
 
 //创建实例
+
 var App = new(ApiGroup)

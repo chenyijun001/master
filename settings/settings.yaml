@@ -1,26 +1,19 @@
-#数据库
 mysql:
-  host: 127.0.0.1
-  port: 3306
-  db: test
-  user: root
-  password: chenyijun
-  log_level: env
-
-#日志
+    host: 127.0.0.1
+    port: "3306"
+    db: test
+    user: root
+    password: chenyijun
+    log_level: env
 logger:
-  level: info
-  prefix: '[ginBlog]'
-  director: log
-  show-line: true
-  log-in-console: true
-
-#系统信息
+    level: info
+    prefix: '[ginBlog]'
+    director: log
+    show-line: true
+    log_in_console: ""
 system:
-  host: 127.0.0.1
-  port: 8090
-  env: release
-
-#错误信息
-error:
-  settingError: settingError
+    host: 127.0.0.1
+    port: "8090"
+    env: release
+site_info:
+    create_at: "11111"

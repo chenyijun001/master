@@ -13,7 +13,8 @@ import (
 type ErrorCode int
 
 const (
-	SettingError ErrorCode = 1001 //系统错误
+	SettingError   ErrorCode = 1001 //系统错误
+	ParameterError ErrorCode = 1002 //参数错误
 )
 
 const file = "models/res/code.json"
