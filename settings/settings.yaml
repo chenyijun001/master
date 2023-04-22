@@ -34,9 +34,21 @@ jwt:
     expires: 48
     issuer: xx
 qiniu:
+    enable: false
     access_key: UMM-xx-FdRif-xx
     secret_key: xx
     bucket: xiugo
     cdn: xx://xx.xx.com/
     zone: xx
     size: 5
+file_settings:
+    type:
+        - "jpg"
+        - "png"
+        - "jpeg"
+        - "gif"
+        - "ico"
+        - "tiff"
+        - "webp"
+    size: 5
+    path: template/upload_files

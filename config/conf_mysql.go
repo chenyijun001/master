@@ -12,5 +12,5 @@ type Mysql struct {
 }
 
 func (m *Mysql) Dsn() string {
-	return m.User + ":" + m.Password + "@tcp(" + m.Host + ":" + m.Port + ")/" + m.Db
+	return m.User + ":" + m.Password + "@tcp(" + m.Host + ":" + m.Port + ")/" + m.Db + "?charset=utf8&parseTime=True&loc=Local"
 }
