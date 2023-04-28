@@ -3,7 +3,7 @@ mysql:
     port: "3306"
     db: test
     user: root
-    password: chenyijun
+    password: root
     log_level: env
 logger:
     level: info

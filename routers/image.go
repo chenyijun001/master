@@ -6,4 +6,5 @@ var image = api.App.ImageApi
 
 func (r RouterGroup) ImageRouter() {
 	r.POST("imageUpload/", image.ImageUploadView)
+	r.GET("imageUpload/", image.ImageListView)
 }
