@@ -3,6 +3,7 @@ package images
 import (
 	"GinBlog/global"
 	"GinBlog/models"
+	"GinBlog/models/res"
 	"GinBlog/utils"
 	"errors"
 	"fmt"
@@ -42,6 +43,7 @@ func SaveFile(c *gin.Context, file *multipart.FileHeader, path string) error {
 		Name:    file.Filename,
 	})
 	global.Logs.Infof("上传文件成功,文件名为：%s,文件大小为：%v,文件header为：%s", file.Filename, file.Size, file.Header)
+	res.OKWithMessage("上传成功！", c)
 	return nil
 }
 

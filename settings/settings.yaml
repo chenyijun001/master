@@ -35,9 +35,9 @@ jwt:
     issuer: xx
 qiniu:
     enable: false
-    access_key: UMM-xx-FdRif-xx
-    secret_key: xx
-    bucket: xiugo
+    access_key: vhCTGYaM5rArzkgC9JUug77RLkZwLYxCsntZ-iLx
+    secret_key: vUsJrolKZnDAncxFFC1KfGMR85YzgYDxxn5iOIgs
+    bucket: xiugou
     cdn: xx://xx.xx.com/
     zone: xx
     size: 5

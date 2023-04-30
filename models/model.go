@@ -9,7 +9,11 @@ import (
 type MODEL struct {
 	gorm.Model
 }
-type Page struct {
+
+type IDs struct {
+	IDList []uint `json:"id_list" `
+}
+type PageInfo struct {
 	Page  int    `form:"page"`  //页数
 	Key   string `form:"key"`   //关键词
 	Limit int    `form:"limit"` //每页限制多少条
