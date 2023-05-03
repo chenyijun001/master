@@ -7,6 +7,11 @@ import (
 	"GinBlog/routers"
 )
 
+// @title
+// @version	1.0
+// @description	API文档描述
+// @host	127.0.0.1:8090
+// @BasePath /
 func main() {
 	core.InitCore()
 	//命令行参数绑定  如果不输入go run main/main.go -db 是不会执行此函数方法的
