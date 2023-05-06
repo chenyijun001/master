@@ -3,8 +3,9 @@ mysql:
     port: "3306"
     db: test
     user: root
-    password: root
+    password: chenyijun
     log_level: env
+    config: "charset=utf8mb4&parseTime=true&loc=Local"
 logger:
     level: info
     prefix: '[ginBlog]'

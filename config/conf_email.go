@@ -1,7 +1,7 @@
 package config
 
 type Email struct {
-	Host             string `yaml:"level"`                                        //IP地址
+	Host             string `yaml:"host"`                                         //IP地址
 	Port             int    `yaml:"port"`                                         //端口号
 	User             string `yaml:"user"`                                         //用户
 	Password         string `yaml:"password" json:"password"`                     //密码

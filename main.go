@@ -2,6 +2,7 @@ package main
 
 import (
 	"GinBlog/core"
+	_ "GinBlog/docs"
 	"GinBlog/flags"
 	"GinBlog/global"
 	"GinBlog/routers"
