@@ -75,6 +75,7 @@ func IsFileSuffix(file *multipart.FileHeader) bool {
 	filename := file.Filename
 	suffix := strings.SplitAfterN(filename, ".", 2)
 	s := suffix[1]
+	global.Logs.Infof(s)
 	imageSuffix := global.Config.FileSettings.Type
 	for _, imageType := range imageSuffix {
 		if s == imageType {
